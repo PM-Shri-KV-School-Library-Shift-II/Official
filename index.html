@@ -117,12 +117,19 @@
       <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
     </a>
 
-    <a href="../Ai/index.html" class="glass-card" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+    <div class="glass-card" onclick="openDevModal()" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); cursor: pointer;">
       <div class="glass-card-icon"><i class="fas fa-robot" style="color:#1565c0"></i></div>
-      <h3>AI Notes Generator</h3>
+      <h3>AI Notes Generator<span class="coming-soon-badge">Coming Soon</span></h3>
       <p>Generate study notes from PDFs using AI</p>
       <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
-    </a>
+    </div>
+
+    <div class="glass-card" onclick="openDevModal()" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7); cursor: pointer;">
+      <div class="glass-card-icon"><i class="fas fa-sitemap" style="color:#7b1fa2"></i></div>
+      <h3>Interactive Website Concept Understanding<span class="coming-soon-badge">Coming Soon</span></h3>
+      <p>Understand website concepts through interactive learning</p>
+      <span class="card-arrow"><i class="fas fa-arrow-right"></i></span>
+    </div>
 
     <a href="sub-websites/activities-videos.html" class="glass-card">
       <div class="glass-card-icon"><i class="fas fa-video"></i></div>
@@ -380,6 +387,34 @@
     </div>
   </div>
 </div>
+
+<!-- ═══ UNDER DEVELOPMENT MODAL ═══ -->
+<div class="modal-overlay" id="devModal">
+  <div class="modal-box">
+    <i class="fas fa-code"></i>
+    <h2>Under Development</h2>
+    <p>This feature is currently under development and will be available soon.</p>
+    <button class="modal-close-btn" onclick="closeDevModal()">Got it</button>
+  </div>
+</div>
+
+<script>
+function openDevModal() {
+  document.getElementById('devModal').classList.add('active');
+}
+
+function closeDevModal() {
+  document.getElementById('devModal').classList.remove('active');
+}
+
+document.getElementById('devModal').addEventListener('click', function(e) {
+  if (e.target === this) closeDevModal();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeDevModal();
+});
+</script>
 
 <script src="assets/js/main.js" defer></script>
 <script src="assets/js/notifications.js" defer></script>
