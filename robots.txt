@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pm-shri-kv-school-library-shift-ii.github.io/-/sitemap.xml
